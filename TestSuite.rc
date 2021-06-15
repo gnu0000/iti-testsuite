@@ -1,0 +1,785 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TestSuite.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\TestSuite.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TESTSUITE_DIALOG DIALOGEX 0, 0, 127, 94
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "TrnsPort TestSuite"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Quit",IDOK,69,73,50,14
+    PUSHBUTTON      "Run Scripts",IDC_RUN,7,73,50,14
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_OWNERDRAWFIXED | WS_BORDER | WS_TABSTOP,7,7,112,56
+    CTEXT           "MR",IDC_MR,95,74,12,8,SS_CENTERIMAGE | NOT WS_VISIBLE
+    CTEXT           "SR",IDC_SR,95,28,11,8,SS_CENTERIMAGE | NOT WS_VISIBLE
+    CTEXT           "MB",IDC_MB,41,76,43,8,SS_CENTERIMAGE | NOT WS_VISIBLE
+    CTEXT           "SB",IDC_SB,37,32,10,8,SS_CENTERIMAGE | NOT WS_VISIBLE
+END
+
+IDD_PROPPAGE_SCRIPT1 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Script Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Script ID:",IDC_STATIC,13,14,48,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT1,65,14,130,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,65,32,130,14,ES_AUTOHSCROLL
+    RTEXT           "Script Name:",IDC_STATIC,13,32,48,14,SS_CENTERIMAGE
+    LISTBOX         IDC_LIST1,17,109,308,144,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Script Properties",IDC_STATIC,7,91,377,172
+    PUSHBUTTON      "Insert",IDC_ADD,335,110,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,335,140,40,14
+    PUSHBUTTON      "Up",IDC_UP,335,170,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,335,200,40,14
+END
+
+IDD_PROPPAGE_SCRIPT2 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Pre Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,140,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,8,140,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_SCRIPT3 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,141,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,7,141,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_SCRIPT4 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Post Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,140,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,7,140,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_SCRIPT5 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "User Message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Popup this message before run",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,15,139,10
+    EDITTEXT        IDC_EDIT1,7,52,379,207,ES_AUTOHSCROLL
+    CTEXT           "Popup message Text",IDC_STATIC,7,40,379,8
+END
+
+IDD_PROPPAGE_COMPONENT1 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Component Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Component ID:",IDC_STATIC,21,14,48,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT1,73,14,130,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,73,32,130,14,ES_AUTOHSCROLL
+    RTEXT           "Component Name:",IDC_STATIC,11,32,58,14,SS_CENTERIMAGE
+    LISTBOX         IDC_LIST1,17,109,308,144,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Script Properties",IDC_STATIC,7,91,377,172
+    PUSHBUTTON      "Insert",IDC_ADD,335,110,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,335,140,40,14
+    PUSHBUTTON      "Up",IDC_UP,335,170,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,335,200,40,14
+END
+
+IDD_PROPPAGE_COMPONENT2 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Pre Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,136,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,8,136,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_COMPONENT3 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,136,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,8,136,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_COMPONENT4 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Post Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,136,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,8,136,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_CASE1 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Test Case Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Case ID:",IDC_STATIC,34,12,48,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT1,86,12,181,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,86,30,181,14,ES_AUTOHSCROLL
+    RTEXT           "Case Name:",IDC_STATIC,34,30,48,14,SS_CENTERIMAGE
+    RTEXT           "Author:",IDC_STATIC,34,48,48,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT3,86,48,181,14,ES_AUTOHSCROLL
+    RTEXT           "Author Position:",IDC_STATIC,23,66,59,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT4,86,66,181,14,ES_AUTOHSCROLL
+    RTEXT           "Revision Date:",IDC_STATIC,34,84,48,14,SS_CENTERIMAGE
+    RTEXT           "Test Objective:",IDC_STATIC,34,102,48,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT5,86,84,181,14,ES_AUTOHSCROLL
+    LTEXT           "Description",IDC_STATIC,32,125,48,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT7,32,142,236,108,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO1,86,103,93,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROPPAGE_CASE2 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Pre Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,136,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,8,136,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    CONTROL         "Run Asynchronously",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,161,81,10
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_CASE3 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,136,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,8,136,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    CONTROL         "Run Asynchronously",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,161,81,10
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_CASE4 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Post Run Steps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,8,19,323,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,8,121,379,9
+    COMBOBOX        IDC_COMBO1,37,136,92,81,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Type:",IDC_STATIC,8,136,22,12,SS_CENTERIMAGE
+    CONTROL         "Halt On Error",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,144,57,10
+    EDITTEXT        IDC_EDIT1,9,189,379,68,ES_AUTOHSCROLL
+    LTEXT           "Exec Command Line",IDC_STATIC,9,170,74,12,
+                    SS_CENTERIMAGE
+    CONTROL         "Run Asynchronously",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,301,161,81,10
+    PUSHBUTTON      "Insert",IDC_ADD,345,17,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,345,44,40,14
+    PUSHBUTTON      "Up",IDC_UP,345,71,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,345,98,40,14
+END
+
+IDD_PROPPAGE_CASE5 DIALOG DISCARDABLE  0, 0, 400, 270
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Properties #2"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Timeout:",IDC_STATIC,6,7,35,14,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO1,45,7,55,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST1,17,109,308,144,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Script Properties",IDC_STATIC,7,91,377,172
+    PUSHBUTTON      "Insert",IDC_ADD,335,110,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,335,140,40,14
+    PUSHBUTTON      "Up",IDC_UP,335,170,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,335,200,40,14
+END
+
+IDD_SYS_PROPERTIES DIALOG DISCARDABLE  0, 0, 321, 228
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "System Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,274,187,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,274,207,40,14
+    LISTBOX         IDC_LIST1,7,7,255,214,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Insert",IDC_ADD,274,7,40,14
+    PUSHBUTTON      "Delete",IDC_DELETE,274,29,40,14
+    PUSHBUTTON      "Up",IDC_UP,274,50,40,14
+    PUSHBUTTON      "Down",IDC_DOWN,274,73,40,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "TestSuite MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TestSuite\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TestSuite.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "TestSuite Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TESTSUITE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 119
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_PROPPAGE_SCRIPT1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 391
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+
+    IDD_PROPPAGE_SCRIPT2, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_PROPPAGE_SCRIPT3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_PROPPAGE_SCRIPT4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_PROPPAGE_SCRIPT5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 386
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_SYS_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_STATUS              BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_CHECKBOX            BITMAP  DISCARDABLE     "res\\bitmap2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "Options"
+    BEGIN
+        MENUITEM "XXXX Parameters ...",         ID_OPTIONS_CONTEXT_PARAMETERS
+
+        MENUITEM "Application Parameters ...",  ID_OPTIONS_PARAMETERS
+        MENUITEM "Connection Info ...",         ID_OPTIONS_CONNECTION
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+IDR_POPUP_EDIT MENU DISCARDABLE 
+BEGIN
+    POPUP "Script-Popup"
+    BEGIN
+        MENUITEM "Script Properties ...",       IDC_SCRIPT_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Run This Script ...",         IDC_SSCIPT_RUN
+        MENUITEM SEPARATOR
+        MENUITEM "Select All Components",       IDC_SCRIPT_SELECT_ALL
+        MENUITEM "Deselect All Components",     IDC_SCRIPT_DESELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Add Component ...",           IDC_SCRIPT_ADD_COMPONENT
+        MENUITEM "Delete This Script ...",      IDC_SCRIPT_DELETE_SCRIPT
+    END
+    POPUP "Component-Popup"
+    BEGIN
+        MENUITEM "Component Properties ...",    IDC_COMPONENT_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Run This Component ...",      IDC_COMPONENT_RUN
+        MENUITEM SEPARATOR
+        MENUITEM "Select All Test Cases",       IDC_COMPONENT_SELECT_ALL
+        MENUITEM "Deselect All Test Cases",     IDC_COMPONENT_DESELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Add Test Case ...",           IDC_COMPONENT_ADD_CASE
+        MENUITEM "Delete This Component ...",   IDC_COMPONENT_DELETE_COMPONENT
+
+    END
+    POPUP "Case-Popup"
+    BEGIN
+        MENUITEM "Test Case Properties...",     IDC_CASE_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Run This Test Case ",         IDC_CASE_RUN
+        MENUITEM SEPARATOR
+        MENUITEM "Delete This Test Case ...",   IDC_CASE_DELETE_CASE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROPPAGE_SCRIPT2 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+IDD_PROPPAGE_SCRIPT3 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+IDD_PROPPAGE_SCRIPT4 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+IDD_PROPPAGE_COMPONENT4 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+IDD_PROPPAGE_COMPONENT2 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+IDD_PROPPAGE_CASE4 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+IDD_PROPPAGE_CASE3 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+IDD_PROPPAGE_CASE2 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+IDD_PROPPAGE_CASE5 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 6, 0
+0x2031, 0x696d, 0x006e, 
+    IDC_COMBO1, 0x403, 6, 0
+0x2033, 0x696d, 0x006e, 
+    IDC_COMBO1, 0x403, 6, 0
+0x2035, 0x696d, 0x006e, 
+    IDC_COMBO1, 0x403, 7, 0
+0x3531, 0x6d20, 0x6e69, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0x3033, 0x6d20, 0x6e69, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x2031, 0x7268, "\000" 
+    IDC_COMBO1, 0x403, 6, 0
+0x2033, 0x7268, 0x0073, 
+    0
+END
+
+IDD_PROPPAGE_COMPONENT3 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7845, 0x6365, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x5153, 0x004c, 
+    IDC_COMBO1, 0x403, 16, 0
+0x6658, 0x7265, 0x7420, 0x206f, 0x7453, 0x6761, 0x6e69, 0x0067, 
+    IDC_COMBO1, 0x403, 18, 0
+0x6658, 0x7265, 0x6620, 0x6f72, 0x206d, 0x7453, 0x6761, 0x6e69, 0x0067, 
+
+    IDC_COMBO1, 0x403, 10, 0
+0x6f43, 0x7970, 0x4620, 0x6c69, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OX_CALENDARTODAY    "Today"
+    IDS_OX_CALENDARNONE     "None"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\TestSuite.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
